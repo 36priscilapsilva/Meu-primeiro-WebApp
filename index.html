@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Boticário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produtos - Boticário</h1>
+        <form id="product-form">
+            <label for="product-name">Nome do Produto:</label>
+            <input type="text" id="product-name" required>
+
+            <label for="product-description">Descrição do Produto:</label>
+            <textarea id="product-description" required></textarea>
+
+            <label for="product-price">Preço:</label>
+            <input type="number" id="product-price" required>
+
+            <label for="product-quantity">Quantidade em Estoque:</label>
+            <input type="number" id="product-quantity" required>
+
+            <label for="product-category">Categoria:</label>
+            <select id="product-category" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Cabelos">Cuidados para os Cabelos</option>
+                <option value="Corpo">Cuidados Corporais</option>
+            </select>
+
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+
+        <div id="category-buttons">
+            <button data-category="Masculino">Masculino</button>
+            <button data-category="Feminino">Feminino</button>
+            <button data-category="Infantil">Infantil</button>
+            <button data-category="Cabelos">Cuidados para os Cabelos</button>
+            <button data-category="Corpo">Cuidados Corporais</button>
+        </div>
+
+        <div id="product-list">
+            <h2>Lista de Produtos</h2>
+
+            <div class="category" id="Masculino-category">
+                <h3>Masculino</h3>
+                <ul id="Masculino-products">
+                    <li class="product-item">
+                        <strong>Nome:</strong> Malbec Eau de Toilette<br>
+                        <strong>Descrição:</strong> Perfume masculino com fragrância marcante e sofisticada, com notas amadeiradas e frutadas.<br>
+                        <strong>Preço:</strong> R$ 159,90<br>
+                        <strong>Quantidade em Estoque:</strong> 50
+                    </li>
+                    <li class="product-item">
+                        <strong>Nome:</strong> Quasar Classic Eau de Toilette<br>
+                        <strong>Descrição:</strong> Perfume masculino com uma combinação de notas frescas e cítricas, ideal para o dia a dia.<br>
+                        <strong>Preço:</strong> R$ 119,90<br>
+                        <strong>Quantidade em Estoque:</strong> 70
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category" id="Feminino-category">
+                <h3>Feminino</h3>
+                <ul id="Feminino-products">
+                    <li class="product-item">
+                        <strong>Nome:</strong> Floratta Blue Eau de Toilette<br>
+                        <strong>Descrição:</strong> Perfume feminino com fragrância floral, delicada e romântica, ideal para o dia a dia.<br>
+                        <strong>Preço:</strong> R$ 129,90<br>
+                        <strong>Quantidade em Estoque:</strong> 100
+                    </li>
+                    <li class="product-item">
+                        <strong>Nome:</strong> Lily Eau de Parfum<br>
+                        <strong>Descrição:</strong> Perfume feminino com uma combinação de notas florais sofisticadas, inspirado na pureza do lírio.<br>
+                        <strong>Preço:</strong> R$ 239,90<br>
+                        <strong>Quantidade em Estoque:</strong> 30
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category" id="Infantil-category">
+                <h3>Infantil</h3>
+                <ul id="Infantil-products">
+                    <li class="product-item">
+                        <strong>Nome:</strong> Sophie Magic Colônia<br>
+                        <strong>Descrição:</strong> Colônia infantil com fragrância suave e divertida, inspirada na doçura da infância.<br>
+                        <strong>Preço:</strong> R$ 79,90<br>
+                        <strong>Quantidade em Estoque:</strong> 40
+                    </li>
+                    <li class="product-item">
+                        <strong>Nome:</strong> Petit Sophie Creme Hidratante<br>
+                        <strong>Descrição:</strong> Creme hidratante infantil com uma fragrância leve e textura suave, ideal para cuidar da pele delicada.<br>
+                        <strong>Preço:</strong> R$ 49,90<br>
+                        <strong>Quantidade em Estoque:</strong> 60
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category" id="Cabelos-category">
+                <h3>Cuidados para os Cabelos</h3>
+                <ul id="Cabelos-products">
+                    <li class="product-item">
+                        <strong>Nome:</strong> Match Operação Resgate Máscara Capilar<br>
+                        <strong>Descrição:</strong> Máscara capilar para cabelos danificados, proporcionando reparação intensa e brilho.<br>
+                        <strong>Preço:</strong> R$ 59,90<br>
+                        <strong>Quantidade em Estoque:</strong> 45
+                    </li>
+                    <li class="product-item">
+                        <strong>Nome:</strong> Nativa SPA Shampoo Revitalizante Argan<br>
+                        <strong>Descrição:</strong> Shampoo revitalizante com óleo de argan, que limpa e hidrata profundamente os cabelos.<br>
+                        <strong>Preço:</strong> R$ 29,90<br>
+                        <strong>Quantidade em Estoque:</strong> 80
+                    </li>
+                </ul>
+            </div>
+
+            <div class="category" id="Corpo-category">
+                <h3>Cuidados Corporais</h3>
+                <ul id="Corpo-products">
+                    <li class="product-item">
+                        <strong>Nome:</strong> Cuide-se Bem Loção Hidratante<br>
+                        <strong>Descrição:</strong> Loção hidratante corporal com fragrância suave e ação prolongada, ideal para todos os tipos de pele.<br>
+                        <strong>Preço:</strong> R$ 49,90<br>
+                        <strong>Quantidade em Estoque:</strong> 200
+                    </li>
+                    <li class="product-item">
+                        <strong>Nome:</strong> Nativa SPA Açúcar Esfoliante Pitaya<br>
+                        <strong>Descrição:</strong> Esfoliante corporal com partículas de açúcar e fragrância exótica de pitaya, que promove uma esfoliação eficaz e delicada.<br>
+                        <strong>Preço:</strong> R$ 69,90<br>
+                        <strong>Quantidade em Estoque:</strong> 80
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
